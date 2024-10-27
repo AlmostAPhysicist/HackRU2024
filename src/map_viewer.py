@@ -8,6 +8,7 @@ navigate through them.
 import folium
 from bus_stop_controller import BusStopController
 controller = BusStopController("data/Bus_Stops_of_NJ_Transit_by_Line.csv")
+# controller = BusStopController("data/RAW_Bus_Stops_of_NJ_Transit_by_Line.csv")
 origin=None
 for i in controller.bus_stops:
     if i.object_id == 85:
@@ -30,6 +31,7 @@ custom_icon_url = "images/285659_marker_map_icon.png"
 
 
 for stop in controller.bus_stops:
+# for stop in controller.bus_stops[1:1000]:
  # Assign labels based on specific object IDs
     if stop.object_id == 85:
         label = "Home"
