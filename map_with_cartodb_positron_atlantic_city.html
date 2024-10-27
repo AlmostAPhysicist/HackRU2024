@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9bf3bfb5ff05c0a521e71e0617d490a3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9bf3bfb5ff05c0a521e71e0617d490a3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9bf3bfb5ff05c0a521e71e0617d490a3 = L.map(
+                "map_9bf3bfb5ff05c0a521e71e0617d490a3",
+                {
+                    center: [39.3643, -74.4229],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 17,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_437076ba39da6ec36cce5b96f0ebdf64 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_437076ba39da6ec36cce5b96f0ebdf64.addTo(map_9bf3bfb5ff05c0a521e71e0617d490a3);
+        
+    
+            var tile_layer_4dbcc87e26bba91bb0bdc2df27fc322c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\u0027https://www.openstreetmap.org/copyright\u0027\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\u0027https://carto.com/attributions\u0027\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_4dbcc87e26bba91bb0bdc2df27fc322c.addTo(map_9bf3bfb5ff05c0a521e71e0617d490a3);
+        
+    
+            var marker_222d0362289102720fe4107bdac588ba = L.marker(
+                [39.36053, -74.43227],
+                {}
+            ).addTo(map_9bf3bfb5ff05c0a521e71e0617d490a3);
+        
+    
+            var icon_2b5661d2db11f6a990ca6ae1e8db7fe0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_222d0362289102720fe4107bdac588ba.setIcon(icon_2b5661d2db11f6a990ca6ae1e8db7fe0);
+        
+    
+        var popup_66419dbe18b05f367eb5662bf4c95e63 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dc28bfd653e16a0029bc63f8ad42c4b9 = $(`<div id="html_dc28bfd653e16a0029bc63f8ad42c4b9" style="width: 100.0%; height: 100.0%;">ATLANTIC AVE AT MARTIN LUTHER KING BLVD (ID: 85)</div>`)[0];
+                popup_66419dbe18b05f367eb5662bf4c95e63.setContent(html_dc28bfd653e16a0029bc63f8ad42c4b9);
+            
+        
+
+        marker_222d0362289102720fe4107bdac588ba.bindPopup(popup_66419dbe18b05f367eb5662bf4c95e63)
+        ;
+
+        
+    
+    
+            var marker_f83d6132c3e43bc9b97992403e19ad59 = L.marker(
+                [39.35948, -74.43489],
+                {}
+            ).addTo(map_9bf3bfb5ff05c0a521e71e0617d490a3);
+        
+    
+            var icon_ff4414f9ce4759641d062e957f6f0198 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f83d6132c3e43bc9b97992403e19ad59.setIcon(icon_ff4414f9ce4759641d062e957f6f0198);
+        
+    
+        var popup_24581b63ea80deb53364389529419f68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e503794f6c0c26f724d59d9ce10dd089 = $(`<div id="html_e503794f6c0c26f724d59d9ce10dd089" style="width: 100.0%; height: 100.0%;">ON ATLANTIC AVE AT OHIO AVE (ID: 93)</div>`)[0];
+                popup_24581b63ea80deb53364389529419f68.setContent(html_e503794f6c0c26f724d59d9ce10dd089);
+            
+        
+
+        marker_f83d6132c3e43bc9b97992403e19ad59.bindPopup(popup_24581b63ea80deb53364389529419f68)
+        ;
+
+        
+    
+    
+            var marker_4f7b6588b8f37c8bf9d7948c6783ce0f = L.marker(
+                [39.36037, -74.43552],
+                {}
+            ).addTo(map_9bf3bfb5ff05c0a521e71e0617d490a3);
+        
+    
+            var icon_5aa5ab9817f17e89adde105c2d92c21b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4f7b6588b8f37c8bf9d7948c6783ce0f.setIcon(icon_5aa5ab9817f17e89adde105c2d92c21b);
+        
+    
+        var popup_f74d05373b97c503e23da6f6075f9269 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2be5a186c6805704faa96d09bec57480 = $(`<div id="html_2be5a186c6805704faa96d09bec57480" style="width: 100.0%; height: 100.0%;">GATE #6 INSIDE AC BUS TERMINAL (ID: 441)</div>`)[0];
+                popup_f74d05373b97c503e23da6f6075f9269.setContent(html_2be5a186c6805704faa96d09bec57480);
+            
+        
+
+        marker_4f7b6588b8f37c8bf9d7948c6783ce0f.bindPopup(popup_f74d05373b97c503e23da6f6075f9269)
+        ;
+
+        
+    
+    
+            var layer_control_bd705ee1a6c90950f6bf2d44332d8eb0_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_437076ba39da6ec36cce5b96f0ebdf64,
+                    "CartoDB Positron No Labels" : tile_layer_4dbcc87e26bba91bb0bdc2df27fc322c,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_bd705ee1a6c90950f6bf2d44332d8eb0 = L.control.layers(
+                layer_control_bd705ee1a6c90950f6bf2d44332d8eb0_layers.base_layers,
+                layer_control_bd705ee1a6c90950f6bf2d44332d8eb0_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_9bf3bfb5ff05c0a521e71e0617d490a3);
+
+        
+</script>
+</html>
