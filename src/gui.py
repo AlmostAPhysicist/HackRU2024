@@ -9,6 +9,7 @@ import tkinter as tk
 from tkinterweb import HtmlFrame
 from bus_stop_controller import BusStopController
 import os
+import time
 
 def create_map():
     # Initialize the bus stop controller and find the origin stop
@@ -63,10 +64,11 @@ root.title("Interactive Map Viewer")
 root.geometry("800x600")
 
 # Create a frame to display the HTML map inside the Tkinter window
-frame = HtmlFrame(root, messages_enabled=False)
+frame = HtmlFrame(root, messages_enabled=True)
 
-# Generate the map and display it in the HtmlFrame
+# Generate the map, wait a moment, and display it in the HtmlFrame
 map_path = create_map()
+time.sleep(1)  # Add a short delay
 frame.load_file(f"file:///{map_path.replace('\\', '/')}")  # Adjust for Windows path
 
 frame.pack(fill="both", expand=True)

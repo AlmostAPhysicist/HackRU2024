@@ -26,25 +26,37 @@ folium.TileLayer(
     name="CartoDB Positron No Labels"
 ).add_to(m)
 
+custom_icon_url = "images/285659_marker_map_icon.png"
 
 
 for stop in controller.bus_stops:
-    folium.CircleMarker(
-        location=[stop.dlat_gis, stop.dlong_gis],   # Use the latitude and longitude of the stop
-        radius=5,                          # Size of the circle
-        color='blue',                      # Outline color of the circle
-        fill=False                         # No fill to make it an empty circle
-    ).add_to(m)
+#     folium.CircleMarker(
+#         location=[stop.dlat_gis, stop.dlong_gis],   # Use the latitude and longitude of the stop
+#         radius=5,                          # Size of the circle
+#         color='blue',                      # Outline color of the circle
+#         fill=False                         # No fill to make it an empty circle
+#     ).add_to(m)
 
     
-# Add a label with the stop's object_id above the circle marker
+# # Add a label with the stop's object_id above the circle marker
+#     folium.Marker(
+#         location=[stop.dlat_gis, stop.dlong_gis],
+#         icon=folium.DivIcon(
+#             html=f'<div style="font-size: 10px; color: black; text-align: center; transform: translate(-50%, -20px);">{stop.object_id}</div>'
+#         )
+#     ).add_to(m)
+
+    icon = folium.CustomIcon(
+        custom_icon_url,
+        icon_size=(30, 30)  # Size of the custom icon
+    )
+
+        # Add a marker with the custom icon and popup information
     folium.Marker(
         location=[stop.dlat_gis, stop.dlong_gis],
-        icon=folium.DivIcon(
-            html=f'<div style="font-size: 10px; color: black; text-align: center; transform: translate(-50%, -20px);">{stop.object_id}</div>'
-        )
+        icon=icon,
+        popup=f"<strong>Stop ID:</strong> {stop.object_id}<br><strong>County:</strong> {stop.county}"
     ).add_to(m)
-
 
 # Add Layer Control to toggle between map layers
 folium.LayerControl().add_to(m)
