@@ -30,21 +30,37 @@ custom_icon_url = "images/285659_marker_map_icon.png"
 
 
 for stop in controller.bus_stops:
-#     folium.CircleMarker(
-#         location=[stop.dlat_gis, stop.dlong_gis],   # Use the latitude and longitude of the stop
-#         radius=5,                          # Size of the circle
-#         color='blue',                      # Outline color of the circle
-#         fill=False                         # No fill to make it an empty circle
-#     ).add_to(m)
+ # Assign labels based on specific object IDs
+    if stop.object_id == 85:
+        label = "Home"
+    elif stop.object_id == 69:
+        label = "James"
+    elif stop.object_id == 169:
+        label = "Pam"
+    elif stop.object_id == 173:
+        label = "Harry"
+    else:
+        label = None
+    if label:
+        folium.Marker(
+            location=[stop.dlat_gis, stop.dlong_gis],
+            icon=folium.DivIcon(
+                html=f"""
+                <div style="
+                    font-size: 14px; 
+                    color: black; 
+                    font-weight: bold; 
+                    background-color: white;
+                    padding: 5px;
+                    border-radius: 5px;
+                    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+                    text-align: center;
+                    ">
+                    {label}
+                </div>"""
+            )
+        ).add_to(m)
 
-    
-# # Add a label with the stop's object_id above the circle marker
-#     folium.Marker(
-#         location=[stop.dlat_gis, stop.dlong_gis],
-#         icon=folium.DivIcon(
-#             html=f'<div style="font-size: 10px; color: black; text-align: center; transform: translate(-50%, -20px);">{stop.object_id}</div>'
-#         )
-#     ).add_to(m)
 
     icon = folium.CustomIcon(
         custom_icon_url,
